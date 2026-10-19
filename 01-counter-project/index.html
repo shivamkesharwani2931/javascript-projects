@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Counter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="counter-container">
+    <h1>JavaScript Counter</h1>
+
+    <div class="counter-box">
+      <div class="counter-face">
+        <output id="counter" class="counter-value" aria-live="polite">0</output>
+      </div>
+
+      <p id="message" class="message" aria-live="polite">
+        Ready when you are!
+      </p>
+
+      <div class="button-row">
+        <button id="increaseBtn" class="counter-button increase" type="button">
+          <span>+</span> Increase
+        </button>
+
+        <button id="decreaseBtn" class="counter-button decrease" type="button">
+          <span>−</span> Decrease
+        </button>
+
+        <button id="resetBtn" class="counter-button reset" type="button">
+          <span>↻</span> Reset
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

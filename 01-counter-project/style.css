@@ -1,0 +1,163 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #f8faff;
+  color: #151b2f;
+}
+
+.counter-container {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(28px, 5vw, 38px);
+  margin-bottom: 30px;
+  color: #151b2f;
+}
+
+.counter-box {
+  width: 100%;
+  padding: 35px 20px;
+  border: 1px solid #d9e2f2;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0 15px 40px rgba(30, 45, 80, 0.08);
+}
+
+.counter-face {
+  width: 190px;
+  height: 190px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    #e8edff 0%,
+    #f5f7ff 55%,
+    white 75%
+  );
+}
+
+.counter-value {
+  font-size: 90px;
+  font-weight: bold;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  transition: transform 0.2s ease;
+}
+
+.counter-value.bump {
+  transform: scale(1.1);
+}
+
+.message {
+  margin: 15px 0 30px;
+  color: #7b849b;
+  font-size: 16px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.counter-button {
+  min-width: 145px;
+  padding: 14px 18px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid;
+  border-radius: 14px;
+  background: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.counter-button span {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.counter-button:hover {
+  transform: translateY(-3px);
+}
+
+.counter-button:active {
+  transform: scale(0.97);
+}
+
+.increase {
+  color: #178e9a;
+  border-color: #83d2d5;
+}
+
+.increase:hover {
+  background: #effdfd;
+}
+
+.decrease {
+  color: #8250d9;
+  border-color: #b79aef;
+}
+
+.decrease:hover {
+  background: #f8f3ff;
+}
+
+.reset {
+  color: #b58a17;
+  border-color: #ecd58d;
+}
+
+.reset:hover {
+  background: #fffaf0;
+}
+
+button:focus-visible {
+  outline: 3px solid #b8c9ff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 520px) {
+  .counter-box {
+    padding: 28px 14px;
+  }
+
+  .counter-face {
+    width: 160px;
+    height: 160px;
+  }
+
+  .counter-value {
+    font-size: 75px;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  .counter-button {
+    width: 100%;
+  }
+}
