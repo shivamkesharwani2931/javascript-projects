@@ -8,7 +8,7 @@ A simple, responsive counter application built using **HTML, CSS, and JavaScript
 
 ### Preview
 
-![JavaScript Counter Preview](./01-counter-project/images/counter-preview.png)
+![JavaScript Counter Preview](./images/counter-preview.png)
 
 ### Features
 
