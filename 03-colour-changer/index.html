@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Changer</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Connect the JavaScript file -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="color-container">
+      <header class="color-header">
+        <h1>Color Changer</h1>
+        <p>Click the button and discover a new color!</p>
+      </header>
+
+      <section class="color-card">
+        <div class="color-preview" id="colorPreview">
+          <span>Current Color</span>
+        </div>
+
+        <div class="color-info">
+          <p class="color-label">SELECTED HEX COLOR</p>
+
+          <div class="hex-container">
+            <span id="hexValue">#7C3AED</span>
+
+            <button
+              type="button"
+              id="copyButton"
+              class="copy-button"
+              aria-label="Copy HEX color"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+
+        <button type="button" id="changeColorButton" class="change-button">
+          <span aria-hidden="true">✦</span>
+          Change Color
+        </button>
+
+        <p id="message" class="message" aria-live="polite">
+          Click to see magic happen!
+        </p>
+      </section>
+
+      <footer class="color-footer">Made with HTML, CSS & JavaScript</footer>
+    </main>
+  </body>
+</html>
+
+
+
