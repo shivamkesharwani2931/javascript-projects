@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="password-container">
+        <header class="app-header">
+            <div class="icon-box">🔐</div>
+            <div>
+                <h1>Password Generator</h1>
+                <p>Create a strong, secure password</p>
+            </div>
+        </header>
+
+        <section class="password-box">
+            <label for="password">Your Password</label>
+
+            <div class="password-output">
+                <input
+                    type="text"
+                    id="password"
+                    placeholder="Click Generate"
+                    readonly
+                    autocomplete="off"
+                    spellcheck="false"
+                    aria-label="Generated password"
+                >
+
+                <button id="copyButton" type="button" aria-label="Copy password">
+                    Copy
+                </button>
+            </div>
+
+            <p id="copyMessage" aria-live="polite"></p>
+        </section>
+
+        <section class="length-section">
+            <div class="section-heading">
+                <label for="length">Password Length</label>
+                <span id="lengthValue">12</span>
+            </div>
+
+            <input
+                type="range"
+                id="length"
+                min="4"
+                max="32"
+                value="12"
+            >
+
+            <div class="range-labels">
+                <span>4 characters</span>
+                <span>32 characters</span>
+            </div>
+        </section>
+
+        <section class="options-section">
+            <h2>Include Characters</h2>
+
+            <label class="option">
+                <input type="checkbox" id="uppercase" checked>
+                <span class="option-symbol">Aa</span>
+                <span>Uppercase letters</span>
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="numbers" checked>
+                <span class="option-symbol">123</span>
+                <span>Numbers</span>
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="symbols" checked>
+                <span class="option-symbol">!?#</span>
+                <span>Symbols</span>
+            </label>
+        </section>
+
+        <button id="generateButton" class="generate-button" type="button">
+            Generate Password
+        </button>
+
+        <p id="errorMessage" role="alert"></p>
+
+        <p class="footer-text">
+            Your password is generated locally in your browser.
+        </p>
+
+    </main>
+
+</body>
+</html>

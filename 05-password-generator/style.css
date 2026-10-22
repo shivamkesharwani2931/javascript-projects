@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #f5f0ff, #e9ddff);
+    color: #2d2047;
+}
+
+.password-container {
+    width: 100%;
+    max-width: 440px;
+    padding: 30px;
+
+    background-color: #ffffff;
+    border: 1px solid #e7ddfa;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(91, 55, 145, 0.12);
+}
+
+
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    background-color: #ede5ff;
+    border-radius: 14px;
+    font-size: 25px;
+}
+
+.app-header h1 {
+    margin-bottom: 6px;
+    font-size: 21px;
+    color: #38215e;
+}
+
+.app-header p {
+    font-size: 13px;
+    color: #827590;
+    line-height: 1.5;
+}
+
+.password-box {
+    margin-bottom: 26px;
+}
+
+.password-box > label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.password-output {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+
+    background-color: #f8f5ff;
+    border: 1px solid #e4d8fa;
+    border-radius: 12px;
+}
+
+.password-output input {
+    width: 100%;
+    min-width: 0;
+    padding: 8px 4px;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    color: #6d28d9;
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.password-output input::placeholder {
+    color: #a399b6;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.password-output button {
+    padding: 10px 14px;
+    flex-shrink: 0;
+
+    border: none;
+    border-radius: 8px;
+    background-color: #ede5ff;
+    color: #6d28d9;
+
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.password-output button:hover {
+    background-color: #ddd0ff;
+}
+
+#copyMessage {
+    min-height: 18px;
+    margin-top: 7px;
+    font-size: 12px;
+    color: #16803d;
+}
+
+
+.length-section {
+    margin-bottom: 26px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#lengthValue {
+    min-width: 38px;
+    padding: 6px 10px;
+
+    border-radius: 8px;
+    background-color: #ede5ff;
+    color: #6d28d9;
+    text-align: center;
+}
+
+#length {
+    width: 100%;
+    accent-color: #7c3aed;
+    cursor: pointer;
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+
+    color: #9388a4;
+    font-size: 11px;
+}
+
+.options-section {
+    margin-bottom: 26px;
+}
+
+.options-section h2 {
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    padding: 13px;
+
+    background-color: #faf8ff;
+    border: 1px solid #eee7fa;
+    border-radius: 10px;
+
+    font-size: 13px;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.option:hover {
+    background-color: #f3edff;
+    border-color: #d8c5ff;
+}
+
+.option input {
+    width: 16px;
+    height: 16px;
+    accent-color: #7c3aed;
+    cursor: pointer;
+}
+
+.option-symbol {
+    min-width: 38px;
+    color: #7c3aed;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.generate-button {
+    width: 100%;
+    padding: 15px;
+
+    border: none;
+    border-radius: 11px;
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.generate-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(109, 40, 217, 0.22);
+}
+
+.generate-button:active {
+    transform: translateY(0);
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid #7c3aed;
+    outline-offset: 3px;
+}
+
+#errorMessage {
+    margin-top: 12px;
+    color: #dc2626;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.footer-text {
+    margin-top: 20px;
+    color: #9388a4;
+    font-size: 11px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 14px;
+    }
+
+    .password-container {
+        padding: 22px 18px;
+        border-radius: 16px;
+    }
+
+    .app-header h1 {
+        font-size: 19px;
+    }
+
+    .password-output input {
+        font-size: 13px;
+    }
+}
